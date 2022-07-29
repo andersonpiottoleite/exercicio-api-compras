@@ -13,15 +13,13 @@ public class Compra {
 
     private Lojista lojista;
     private Pessoa pessoa;
-    private FormaPagamentoEnum formaPagamento;
     private Integer quantidadeParcelas;
     private BigDecimal valorTotal;
     private List<Produto> produtos = new ArrayList<>();
 
-    public Compra(Lojista lojista, Pessoa pessoa, FormaPagamentoEnum formaPagamento, Integer quantidadeParcelas, List<Produto> produtos) {
+    public Compra(Lojista lojista, Pessoa pessoa, Integer quantidadeParcelas, List<Produto> produtos) {
         this.lojista = lojista;
         this.pessoa = pessoa;
-        this.formaPagamento = formaPagamento;
         this.quantidadeParcelas = quantidadeParcelas;
         this.produtos = produtos;
     }
@@ -40,14 +38,6 @@ public class Compra {
 
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
-    }
-
-    public FormaPagamentoEnum getFormaPagamento() {
-        return formaPagamento;
-    }
-
-    public void setFormaPagamento(FormaPagamentoEnum formaPagamento) {
-        this.formaPagamento = formaPagamento;
     }
 
     public Integer getQuantidadeParcelas() {

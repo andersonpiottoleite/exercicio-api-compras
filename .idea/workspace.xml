@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a70782ed-7e77-4b01-b111-a0924c625447" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-compras.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/compra/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/conta/Conta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/enumerador/FormaPagamentoEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/exception/SaldoInsuficienteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/factory/CompraFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/factory/ContaFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Contador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Empregado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Lojista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/pessoa/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/produto/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CalculoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CompraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/teste/TesteCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/teste/TesteCompras.java" afterDir="false" />
+    <list default="true" id="a70782ed-7e77-4b01-b111-a0924c625447" name="Changes" comment="primeiro commit com solução inicial">
+      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoCalculavel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoCredito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoCreditoParcelado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoDebito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoPix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/letscode/bb/model/compra/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/compra/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/letscode/bb/model/factory/CompraFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/factory/CompraFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CalculoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CalculoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/letscode/bb/model/teste/TesteCompras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/letscode/bb/model/teste/TesteCompras.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -72,6 +63,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.letscode.bb.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.letscode.bb.model.service" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TesteCompras">
@@ -117,8 +111,17 @@
       <updated>1658521353972</updated>
       <workItem from="1658521358123" duration="2645000" />
       <workItem from="1658772621841" duration="8575000" />
-      <workItem from="1658941839173" duration="7222000" />
+      <workItem from="1658941839173" duration="7896000" />
+      <workItem from="1659120139638" duration="3259000" />
     </task>
+    <task id="LOCAL-00001" summary="primeiro commit com solução inicial">
+      <created>1658956731393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658956731393</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,13 +138,32 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="primeiro commit com solução inicial" />
+    <option name="LAST_COMMIT_MESSAGE" value="primeiro commit com solução inicial" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/br/com/letscode/bb/model/teste/TesteCompras.java</url>
-          <line>60</line>
+          <line>62</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/com/letscode/bb/model/service/FormaDePagamentoDebito.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CalculoService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/com/letscode/bb/model/service/CalculoService.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

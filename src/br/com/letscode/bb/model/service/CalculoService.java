@@ -12,14 +12,14 @@ import java.math.BigDecimal;
 
 public class CalculoService {
 
-    public void calculaValorTotal(Compra compra, Conta conta) throws SaldoInsuficienteException {
+    public void calculaValorTotal(FormaDePagamentoCalculavel formaDePagamentoCalculavel, Compra compra, Conta conta) throws SaldoInsuficienteException {
 
         BigDecimal valorTotalCompra = new BigDecimal(0);
         for (Produto produto: compra.getProdutos()) {
             valorTotalCompra = valorTotalCompra.add(produto.getPreco());
         }
 
-        valorTotalCompra = calcularFormaPGTO(compra, valorTotalCompra);
+        valorTotalCompra = calcularFormaPGTO(formaDePagamentoCalculavel , compra, valorTotalCompra);
         valorTotalCompra = calcularFrete(compra, valorTotalCompra);
         valorTotalCompra = calculaDescontoEmpregado(compra, valorTotalCompra);
         validaSaldo(valorTotalCompra, conta);
@@ -62,22 +62,7 @@ public class CalculoService {
         return valorTotalCompra;
     }
 
-    private BigDecimal calcularFormaPGTO(Compra compra, BigDecimal valorTotalCompra) {
-        if (compra.getFormaPagamento().equals(FormaPagamentoEnum.DEBITO)){
-            valorTotalCompra = valorTotalCompra.subtract(valorTotalCompra.multiply(new BigDecimal(0.10)));
-
-        } else if (compra.getFormaPagamento().equals(FormaPagamentoEnum.CREDITO)){
-            valorTotalCompra = valorTotalCompra.subtract(valorTotalCompra.multiply(new BigDecimal(0.05)));
-
-        } else if (compra.getFormaPagamento().equals(FormaPagamentoEnum.CREDITO_PARCELADO)){
-            Integer quantidadeParcelas = compra.getQuantidadeParcelas();
-            BigDecimal parcela = valorTotalCompra.divide(new BigDecimal(quantidadeParcelas));
-
-            for (int i = 0; i < quantidadeParcelas; i++) {
-                valorTotalCompra = valorTotalCompra.add(parcela.multiply(new BigDecimal(0.01)));
-            }
-        }
-
-        return valorTotalCompra;
+    private BigDecimal calcularFormaPGTO(FormaDePagamentoCalculavel formaDePagamentoCalculavel, Compra compra, BigDecimal valorTotalCompra) {
+        return formaDePagamentoCalculavel.calcularFormaPGTO(compra, valorTotalCompra);
     }
 }

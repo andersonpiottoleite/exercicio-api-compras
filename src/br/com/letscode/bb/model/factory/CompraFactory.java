@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CompraFactory {
 
-    public static Compra criaCompra(Lojista lojista, Pessoa pessoa, FormaPagamentoEnum formaPagamento, Integer quantidadeParcelas, List<Produto> produtos){
-        return new Compra(lojista, pessoa, formaPagamento, quantidadeParcelas, produtos);
+    public static Compra criaCompra(Lojista lojista, Pessoa pessoa, Integer quantidadeParcelas, List<Produto> produtos){
+        return new Compra(lojista, pessoa, quantidadeParcelas, produtos);
     }
 }
